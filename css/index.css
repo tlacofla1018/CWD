@@ -121,7 +121,7 @@ a{
     margin: 16px auto;
 }
 #tab > li input:checked ~.ab-box{
-    z-index: 90;
+    z-index: 50;
 }
 #tab > li input:checked + label{
     background-color: #767676;
@@ -171,6 +171,7 @@ a{
     position: fixed;
     top: calc(50% - 200px);
     left: calc(50% - 300px);
+    z-index: 100;
 }
 #popup-box h3{
     line-height: 50px;
