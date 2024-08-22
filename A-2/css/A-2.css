@@ -1,0 +1,254 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,dl,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+#container{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ----- header 입니다. ----- */
+#container .header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100px;
+    border-bottom: solid 2px #178325;
+    box-sizing: border-box;
+}
+#container .header h1{}
+#container .header h1 a{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#container .header h1 a img{}
+#container .header nav{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+#container .depth01{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+#container .depth01 > li{
+    position: relative;
+    width: 25%;
+}
+#container .depth01 > li > a{
+    line-height: 50px;
+    display: block;
+}
+#container .depth02{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+#container .depth02 li a{
+    line-height: 40px;
+    display: block;
+    border-bottom: solid 1px #178325;
+}
+#container .depth02 li:nth-child(1) a{
+    line-height: 20px;
+    border-bottom: 0;
+    font-weight: 100;
+}
+#container .depth02 li:last-child a{
+    border-bottom: 0;
+}
+#container .backGround{
+    background-color: #fff;
+    border-bottom: solid 2px #178325;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1200px;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.6s ease-in-out;
+}
+#container .depth01 > li:hover > a,
+#container .depth02 li:hover a{
+    background-color: #178225;
+    color: #fff;
+}
+#container nav:hover .depth02,
+#container nav:hover + .backGround{
+    height: 142px;
+}
+
+/* ----- main 입니다 ----- */
+#container .main{}
+#container .mainBanner{
+    height: 300px;
+}
+#container .mainBanner img{}
+#container .mainContents{
+    height: 200px;
+}
+#container .mainContents > ul{
+    display: flex;
+    justify-content: space-between;
+}
+#container .mainContents > ul > li{
+    width: 33.333%;
+    height: 200px;
+    border-right: solid 1px #178225;
+}
+#container .mainContents > ul > li:last-child{
+    border-right: 0;
+}
+#container .mainContents > ul > li{}
+#container .mainContents > ul > li h2{
+    border-bottom: dashed 1px #178325;
+    line-height: 40px;
+    height: 40px;
+    box-sizing: border-box;
+}
+#container .mainContents > ul > li h2 a{}
+#container .notice{
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#container .notice dl{
+    display: flex;
+    justify-content: space-between;
+}
+#container .notice dl dt{}
+#container .notice dl dt a{
+    line-height: 40px;
+    display: block;
+}
+#container .notice dl dd{}
+#container .notice dl dd a{
+    line-height: 40px;
+    display: block;
+}
+#container .gallery{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#container .gallery li{
+    width: 32%;
+}
+#container .gallery li a{}
+#container .gallery li a img{
+    width: 100%;
+    height: auto;
+}
+#container .banner{
+    height: 200px;
+    display: block;
+    background: url(../img/A2-img/content-img/banner.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+#container .banner a{
+    background-color: rgba(23, 130, 37, 0.4);
+    line-height: 60px;
+    width: 100px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 50px);
+}
+
+/* ----- 팝업창 입니다 ----- */
+#popUp{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 150px);
+    background-color: #fff;
+    border: solid 2px #178225;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: none;
+}
+#popUp h3{
+    margin: 30px 20px 20px;
+}
+#popUp p{
+    margin-left: 20px;
+    line-height: 24px;
+}
+#popUp .closeBtn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    line-height: 20px;
+}
+
+/* ----- footer 입니다 ----- */
+#container .footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px #178325;
+    background-color: #fff;
+}
+#container .footer h1{}
+#container .footer h1 a{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#container .footer h1 a img{}
+#container .footer p{}
+#container .familySite{
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+#container .familySite li{
+    width: 32%;
+}
+#container .familySite li a{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#container .familySite li a img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20%;
+}
+.popupOpen{
+    display: block !important;
+}
