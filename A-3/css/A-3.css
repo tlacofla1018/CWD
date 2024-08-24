@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+/* ----- 초기화 입니다 ----- */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* ----- 스타일 시작입니다 ----- */
+#container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----- Header 입니다 ----- */
+#header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: solid 2px #332b41;
+    box-sizing: border-box;
+}
+#header h1{}
+#header h1 a{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header h1 a img{}
+
+#header nav{
+    width: 60%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#header .depth01{
+    display: flex;
+    justify-content: space-between;
+}
+#header .depth01 > li{
+    width: 25%;
+    position: relative;
+}
+#header .depth01 > li > a{
+    display: block;
+    line-height: 50px;
+}
+#header .depth02{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+#header .depth02 li{}
+#header .depth02 li a{
+    display: block;
+    line-height: 40px;
+    background-color: #fff;
+    border-bottom: solid 1px #332b41;
+}
+#header .depth02 li:last-child a{
+    border-bottom: 0;
+}
+#header .depth01 > li:hover > a,
+#header .depth02 li:hover a{
+    background-color: #332b41;
+    color: #fff;
+}
+#header .depth01:hover .depth02{
+    height: 204px;
+}
+
+/* ----- 메인 컨텐츠 입니다 ----- */
+main{}
+main section{}
+
+#mainBanner{
+    height: 300px;
+}
+#mainBanner li{}
+#mainBanner li a{}
+#mainBanner li a img{}
+
+#mainContents{
+    display: flex;
+}
+#mainContents > li{
+    width: 33.333%;
+}
+#mainContents .tabBox{
+    display: flex;
+    position: relative;
+}
+#mainContents .tabBox > li{}
+#mainContents .tabBox > li input{
+    display: none;
+}
+#mainContents .tabBox > li label{
+    display: block;
+    line-height: 50px;
+    background-color: #332b41;
+    color: #fff;
+    padding: 0 20px;
+}
+#mainContents .abBox{
+    height: 150px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #d6d0e0;
+    z-index: 1;
+}
+
+#mainContents .noticeBox .abBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    box-sizing: border-box;
+}
+#mainContents .noticeBox dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#mainContents .noticeBox dl dt{}
+#mainContents .noticeBox dl dt a{}
+#mainContents .noticeBox dl dd{}
+#mainContents .noticeBox dl dd a{}
+
+#mainContents .galleryBox .abBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainContents .galleryBox ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#mainContents .galleryBox ul li{}
+#mainContents .galleryBox ul li a{}
+#mainContents .galleryBox ul li a img{}
+
+#mainContents .tabBox > li input:checked ~ .abBox{
+    z-index: 99;
+}
+#mainContents .tabBox > li input:checked ~ label{
+    background-color: #d6d0e0;
+    color: #333;
+}
+
+#mainContents .middleBanner{}
+#mainContents .middleBanner a{
+    display: block;
+    height: 200px;
+    background: url(../images/banner.jpg) no-repeat center / cover;
+}
+
+#mainContents .direct{
+    height: 200px;
+    background: url(../images/direct.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainContents .direct button{
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    border: 0;
+    background-color: #d6d0e0;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ----- Footer 입니다 ----- */
+#footer{
+    display: flex;
+    height: 100px;
+    background-color: #fff;
+    border: solid 2px #332b41;
+    box-sizing: border-box;
+}
+#footer h2{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#footer h2 a{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer h2 a img{}
+#footer .part{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer .part p{
+    line-height: 50px;
+}
+#footer .footerMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+#footer .footerMenu li{
+    display: flex;
+    justify-content: center;
+    width: 33.333%;
+}
+#footer .footerMenu li a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* ----- 팝업 입니다 ----- */
+#popup{
+    position: fixed;
+    height: 300px;
+    width: 600px;
+    background-color: #fff;
+    border: solid 1px #333;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    z-index: 999;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 40px;
+    display: none;
+}
+#closeBtn{
+    position: absolute;
+    padding: 10px 20px;
+    top: 5%;
+    right: 5%;
+    background-color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: #ccc 0 0 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#popup h3{
+    margin: 40px 0;
+}
+#popup p{}
+.show{
+    display: block !important;
+}
