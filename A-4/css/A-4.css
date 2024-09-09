@@ -1,0 +1,324 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+dl,ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+#container{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+/*-------- 헤더 --------*/
+#header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    background-color: #2d2924;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+/*------------ 헤더 > 로고 ------------*/
+#header h1{}
+#header h1 a{
+    display: block;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#header h1 a img{}
+/*--------- 헤더 > 네비게이션 ----------*/
+#header nav{
+    width: 60%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#header .menuDepth01{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+#header .menuDepth01 > li{
+    width: 25%;
+    position: relative;
+}
+#header .menuDepth01 > li > a{
+    display: block;
+    line-height: 50px;
+    color: #FBF2E8;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#header .menuDepth02{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+#header .menuDepth02 li{}
+#header .menuDepth02 li a{
+    display: block;
+    line-height: 50px;
+    background-color: #2d2924;
+    color: #FBF2E8;
+    font-size: 16px;
+}
+#header .menuBg{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #2d2924;
+    z-index: 1;
+    transition: all 0.6s ease-in-out;
+}
+#header .menuDepth01:hover .menuDepth02,
+#header nav:hover + .menuBg{
+    height: 150px;
+}
+#header .menuDepth01 > li:hover > a,
+#header .menuDepth02 li:hover a{
+    background-color: #FBF2E8;
+    color: #2d2924;
+}
+
+#container{}
+#container main{}
+#container main section{}
+/*------------- 메인 배너 -------------*/
+#mainBanner{
+    height: 300px;
+    background-color: #fff;
+}
+#mainBanner .slideImg{
+    display: flex;
+    overflow: hidden;
+}
+#mainBanner .slideImg li{}
+#mainBanner .slideImg li a{
+    display: block;
+    position: relative;
+}
+#mainBanner .slideImg li a img{}
+/*------------ 메인 컨텐츠 ----------*/
+#mainContents{
+    height: 200px;
+}
+#mainContents .contents{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+#mainContents .contents > li{
+    width: 33.333%;
+    border-right: dashed 1px #2d2924;
+}
+#mainContents .contents > li:last-child{
+    border-right: none;
+}
+#mainContents .contents > li h3{}
+#mainContents .contents > li h3 a{
+    display: block;
+    line-height: 40px;
+    background-color: #2d2924;
+    color: #FBF2E8;
+    text-align: center;
+    font-size: 18px;
+}
+/*--------- 공지사항 ----------*/
+#mainContents .noticeBox{
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#mainContents .noticeBox dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25%;
+}
+#mainContents .noticeBox dl dt{}
+#mainContents .noticeBox dl dt a{
+    font-size: 16px;
+}
+#mainContents .noticeBox dl dd{}
+#mainContents .noticeBox dl dd a{
+    font-size: 14px;
+}
+/*--------- 갤러리 ----------*/
+#mainContents .galleryBox{
+    height: 160px;
+}
+#mainContents .galleryBox ul{
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#mainContents .galleryBox ul li{}
+#mainContents .galleryBox ul li a{}
+#mainContents .galleryBox ul li a img{
+    height: 130px;
+    width: 110px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    transition: all 0.4s ease-in-out;
+}
+#mainContents .galleryBox ul li:hover a img{
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+/*--------- 바로가기 ----------*/
+#mainContents .directBox{
+    height: 200px;
+    background: url(../images/direct.jpg) no-repeat center / cover;
+    position: relative;
+}
+#mainContents .directBox button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 1px #fff;
+    background-color: #ffffff00;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*-------- 풋터 ---------*/
+#footer{
+    height: 100px;
+    background-color: #2d2924;
+    display: flex;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+#footer .footerLeft{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*-------- 하단메뉴 ---------*/
+#footer .footerMenu{
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+#footer .footerMenu li{
+    width: 33.333%;
+}
+#footer .footerMenu li a{
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+/*-------- 카피 ---------*/
+#footer div p{
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+/*-------- 패밀리사이트 ---------*/
+#footer .footerRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    position: relative;
+}
+#footer .familySiteBtn{
+    color: #fff;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 1px #fff;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+#footer .familySite{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2d2924;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+#footer .familySite li{}
+#footer .familySite li a{
+    display: block;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: dashed 1px #fff;
+}
+.slide{
+    height: 123px !important;
+}
+
+/*-------- 레이어 팝업입니다 --------*/
+#popUpBox{
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    border: solid 1px #2d2924;
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+#popUpBox .closeBtn{
+    color: #333;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 4px 12px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+#popUpBox h3{}
+#popUpBox p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.showPopUp{
+    display: flex !important;
+}

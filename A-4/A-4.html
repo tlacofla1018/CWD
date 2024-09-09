@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유진건설</title>
+    <link rel="stylesheet" href="./css/A-4.css">
+</head>
+<body>
+    <!-- div#container>header#header+main>section#mainBanner+section#mainContents^footer#footer -->
+    <div id="container">
+
+        <!----------------- 헤더 ------------------>
+        <header id="header">
+            <!-- h1>a[href=#]>img^^nav>ul.menuDepth01>li*4>a[href=#]+ul.menuDepth02>li*3>a[href=#] -->
+            <h1>
+                <a href="#">
+                    <img src="./images/newLogo.png" alt="메인로고 이미지">
+                </a>
+            </h1>
+            <!--------------- 헤더 > 네비게이션 ---------------->
+            <nav>
+                <ul class="menuDepth01">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="menuDepth02">
+                            <li>
+                                <a href="#">인사말</a>
+                            </li>
+                            <li>
+                                <a href="#">조직구성도</a>
+                            </li>
+                            <li>
+                                <a href="#">오시는길</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">사업영역</a>
+                        <ul class="menuDepth02">
+                            <li>
+                                <a href="#">전원주택</a>
+                            </li>
+                            <li>
+                                <a href="#">도시재생</a>
+                            </li>
+                            <li>
+                                <a href="#">인테리어</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="menuDepth02">
+                            <li>
+                                <a href="#">입주단지</a>
+                            </li>
+                            <li>
+                                <a href="#">입주캘린더</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="menuDepth02">
+                            <li>
+                                <a href="#">공지사항</a>
+                            </li>
+                            <li>
+                                <a href="#">건축상담</a>
+                            </li>
+                            <li>
+                                <a href="#">홍보자료실</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menuBg"></div>
+        </header>
+        
+        <main>
+            <!-------------- 메인 배너 ---------------->
+            <section id="mainBanner">
+                <!-- ul.slideImg>li*3>a[href="#"]>img+span -->
+                <ul class="slideImg">
+                    <li>
+                        <a href="#">
+                            <img src="./images/banner1.png" alt="배너 이미지 1, 건축과 인테리어">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/banner2.png" alt="배너 이미지 2, 모델하우스 VR체험">
+                        </a>
+                        </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/banner3.png" alt="배너 이미지 3, 유진건설 인재채용">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-------------- 메인 컨텐츠 --------------->
+            <section id="mainContents">
+                <!-- ul.contents>li*3 -->
+                <ul class="contents">
+                    <li>
+                        <!-- h3>a[href=#]^div.noticeBox -->
+                        <h3><a href="#">공지사항</a></h3>
+                        <div class="noticeBox">
+                            <!-- dl*4>dt>a[href="#"]^dd>a[href="#"] -->
+                            <dl>
+                                <dt><a class="openBtn" href="#none">상반기 신입/경력 사원 채용 공고</a></dt>
+                                <dd><a href="#">2020.11.20</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#">건설의 날 기념 행사를 안내해드립니다</a></dt>
+                                <dd><a href="#">2020.11.20</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#">대학생 대상 건설현장 탐방기</a></dt>
+                                <dd><a href="#">2020.11.20</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#">유진건설, 시공평가 순위 상위 5위 달성</a></dt>
+                                <dd><a href="#">2020.11.20</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- h3>a[href=#]^div.galleryBox -->
+                        <h3><a href="#">갤러리</a></h3>
+                        <div class="galleryBox">
+                            <!-- ul>li*3>a[href="#"]>img -->
+                            <ul>
+                                <li><a href="#"><img src="./images/gallery01.jpg" alt="아이키 이미지 1"></a></li>
+                                <li><a href="#"><img src="./images/gallery02.jpeg" alt="아이키 이미지 2"></a></li>
+                                <li><a href="#"><img src="./images/gallery03.jpeg" alt="아이키 이미지 3"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="directBox">
+                        <button>바로가기</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!----------------- 풋터 ----------------->
+        <footer id="footer">
+            <div class="footerLeft">
+                <!-- ul.footerMenu>li*3>a[href="#"] -->
+                <ul class="footerMenu">
+                    <li><a href="#">하단메뉴1</a></li>
+                    <li><a href="#">하단메뉴2</a></li>
+                    <li><a href="#">하단메뉴3</a></li>
+                </ul>
+                <p>
+                    COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED
+                </p>
+            </div>
+            <!-- div>btn+ul.familySite>li*3>a[href="#"] -->
+            <div class="footerRight">
+                <button class="familySiteBtn">패밀리사이트</button>
+                <ul class="familySite">
+                    <li><a href="#">패밀리사이트1</a></li>
+                    <li><a href="#">패밀리사이트2</a></li>
+                    <li><a href="#">패밀리사이트3</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- div#popUp>btn+h3+p -->
+        <div id="popUpBox">
+            <button class="closeBtn">닫기</button>
+            <h3>상반기 신입/경력 사원 채용 공고</h3>
+            <p>
+                국내 최고의 건설회사로 발돋움하고 있는 유진건설에서는 <br>
+                열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다. <br>
+                남율건설과 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.
+            </p>
+        </div>
+    </div>
+
+    <script src="./script/jquery-1.12.3.js"></script>
+    <script src="./script/A-4.js"></script>
+</body>
+</html>
