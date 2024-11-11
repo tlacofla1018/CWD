@@ -21,8 +21,9 @@ a{
     border: solid 2px #FF7B54;
     box-sizing: border-box;
 }
-.container{
+.wrap main{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: calc(100% - 120px);
 }
@@ -117,14 +118,6 @@ a{
     color: #FF7B54;
 }
 
-/* ------------------ 메인 ------------------ */
-#main{
-    display: flex;
-    width: calc(100% - 200px);
-    height: 100%;
-    border: solid 2px #FF7B54;
-    box-sizing: border-box;
-}
 /* ---------------------- 좌측 컨텐츠 --------------------- */
 #leftContents{
     display: flex;
@@ -283,46 +276,33 @@ a{
     font-size: 14px;
     text-align: center;
 }
+
 /* ------------------ 메인배너 ------------------ */
 #mainBanner{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: calc(100vw - 600px);
-    height: calc(100vh - 120px);
+    width: calc(100% - 600px);
+    height: 100%;
     overflow: hidden;
 }
 #mainBanner ul{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
     display: flex;
+    width: 999999999999px;
+    height: 100%;
 }
 #mainBanner ul li{
-    width: 100%;
-    height: calc(100vh - 120px);
+    width: calc(100vw - 600px);
+    height: 100%;
 }
+#mainBanner .bg01{
+    background: url(../images/hs.jpg) no-repeat center / cover;
+}
+#mainBanner .bg02{
+    background: url(../images/sub.jpg) no-repeat center / cover;
+}
+#mainBanner .bg03{
+    background: url(../images/b.jpg) no-repeat center / cover;
+}
+
 #mainBanner ul li a{}
-#mainBanner ul li a img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/* #mainBanner{
-    width: calc(100% - 800px);
-    height: 100%;
-}
-#mainBanner ul{
-    display: flex;
-}
-#mainBanner ul li{
-    background-color: #333;
-    width: 600px;
-    height: 20px;
-}
-#mainBanner ul li a{} */
 
 /* ----------------------- 풋터 ----------------------- */
 #footer{
