@@ -1,0 +1,529 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* 공통 */
+.container1340{
+    width: 1340px;
+    margin: 0 auto;
+}
+.db{
+    display: block;
+}
+
+/* 헤더 */
+header{
+    position: relative;
+    width: 100%;
+}
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: solid 1px #e31a40;
+    border-bottom: 0;
+}
+.header_container h1{
+    width: 190px;
+}
+.header_container h1 a{
+    width: 100%;
+}
+.header_container h1 a img{
+    width: 100%;
+}
+.header_container nav{
+    text-align: center;
+    padding-top: 59px;
+    box-sizing: border-box;
+}
+.header_container nav:hover .nav_depth02{
+    height: 160px;
+}
+.header_container nav .nav_depth01{
+    display: flex;
+}
+.header_container nav .nav_depth01 > li{
+    position: relative;
+}
+.header_container nav .nav_depth01 > li > a{
+    display: block;
+    width: 140px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #e31a40;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+}
+.header_container nav .nav_depth01 > li:hover > a{
+    color: #e31a40;
+    background-color: #fff;
+    font-size: 16px;
+}
+.header_container nav .nav_depth02{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.header_container nav .nav_depth02 li a{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    color: #333;
+    background-color: #ffa2b3;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+}
+.header_container nav .nav_depth02 li:hover a{
+    color: #e31a40;
+    background-color: #fff;
+    font-size: 16px;
+}
+.header_container nav:hover ~.header_bg{
+    height: 160px;
+}
+header .header_bg{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #ffa2b3;
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+}
+
+main .main_top{
+    position: relative;
+}
+
+/* 메인배너 슬라이드 */
+.main_top .slide_banner{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.main_top .slide_banner ul{
+    display: flex;
+    flex-direction: column;
+    height: 9999px;
+    width: 100%;
+}
+.main_top .slide_banner ul li{
+    width: 100%;
+    height: 350px;
+}
+.main_top .slide_banner ul li a{
+    width: 100%;
+    height: 350px;
+}
+.main_top .slide_banner ul li a img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 바로가기 */
+.main_top .q_btn{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 670px);
+}
+.main_top .q_btn ul{
+    display: flex;
+    width: 100%;
+}
+.main_top .q_btn ul li{
+    width: 20%;
+}
+.main_top .q_btn ul li a{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+.main_top .q_btn ul li:hover a{
+    background-color: rgb(255, 255, 255, 0.8);
+}
+.main_top .q_btn ul li a img{
+    width: 40px;
+    margin: 0 auto;
+}
+
+.main_middle{
+    display: flex;
+    align-items: center;
+}
+
+.main_middle .middle_menu{
+    width: 200px;
+    text-align: center;
+}
+.main_middle .middle_depth01 > li{
+    position: relative;
+}
+.main_middle .middle_depth01 > li > a{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    color: #fff;
+    background-color: #e31a40;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+}
+.main_middle .middle_depth01 > li:hover > a{
+    color: #e31a40;
+    background-color: #fff;
+    font-size: 16px;
+}
+.main_middle .middle_depth01:hover .middle_depth02{
+    width: 1140px;
+}
+.main_middle .middle_depth02{
+    position: absolute;
+    display: flex;
+    width: 0;
+    top: 0;
+    left: 100%;
+    background-color: #ffa2b3;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.main_middle .middle_depth02 li a{
+    display: block;
+    width: 140px;
+    line-height: 40px;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+}
+.main_middle .middle_depth02 li:hover a{
+    color: #e31a40;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.main_middle .middle_banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    height: 160px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ccc;
+}
+.main_middle .middle_banner > div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.main_middle .middle_banner_img{
+    width: 80px;
+}
+.main_middle .middle_banner_img img{
+    width: 100%;
+}
+.main_middle .middle_banner_text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #333;
+}
+.main_middle .middle_banner_text strong{
+    font-size: 18px;
+}
+.main_middle .middle_banner_icon{
+    width: 60px;
+}
+.main_middle .middle_banner_icon a{
+    width: 100%;
+}
+.main_middle .middle_banner_icon a img{
+    width: 100%;
+}
+
+.main_bottom{
+    display: flex;
+}
+
+.tab_container{
+    width: 670px;
+}
+.tab_container .tab{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.tab_container .tab li{
+    width: 50%;
+}
+.tab_container .tab li input{
+    display: none;
+}
+.tab_container .tab li input:checked ~label{
+    background-color: #e31a40;
+    color: #fff;
+}
+.tab_container .tab li label{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ffa2b3;
+    color: #333;
+    cursor: pointer;
+}
+.tab_container .tab li input:checked ~.tab_contents{
+    z-index: 50;
+}
+.tab_contents{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #e31a40;
+    background-color: #fff;
+    z-index: 20;
+}
+.tab_container .tab .notice div{
+    display: flex;
+    flex-direction: column;
+}
+.tab_container .tab .notice div dl{
+    display: flex;
+    justify-content: space-between;
+}
+.tab_container .tab .notice div dl dt{
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tab_container .tab .notice div dl dt a,
+.tab_container .tab .notice div dl dd a{
+    line-height: 40px;
+    color: #333;
+}
+.tab_container .tab .gallery > div ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.tab_container .tab .gallery > div ul li{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab_container .tab .gallery > div ul li div a{
+    width: 100%;
+}
+.tab_container .tab .gallery > div ul li div a img{
+    width: 100%;
+}
+.tab_container .tab .gallery > div ul li p a{
+    color: #333;
+}
+
+.fade_container{
+    width: 670px;
+    height: 240px;
+}
+.fade_container div{
+    width: 100%;
+    height: 100%;
+}
+.fade_container div ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.fade_container div ul li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.fade_container div ul li a{
+    width: 100%;
+    height: 100%;
+}
+.fade_container div ul li a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: solid 1px #e31a40;
+    border-top: 0;
+}
+footer h2{
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+}
+footer h2 a{
+    width: 100%;
+}
+footer h2 a img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+footer p{
+    width: calc(100% - 400px);
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: dashed 1px #e31a40;
+    border-left: dashed 1px #e31a40;
+}
+footer > div{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .family_site{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+footer .family_site button{
+    width: 100%;
+    line-height: 40px;
+    border: solid 1px #e31a40;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+footer .family_site button:hover{
+    background-color: #e31a40;
+    color: #fff;
+}
+footer .family_site ul{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+footer .family_site ul.slide{
+    height: 120px;
+}
+footer .family_site ul li a{
+    display: block;
+    line-height: 40px;
+    background-color: #ffa2b3;
+    color: #333;
+    border-bottom: solid 1px #e31a40;
+    transition: all 0.4s ease-in-out;
+}
+footer .family_site ul li:last-child a{
+    border: 0;
+}
+footer .family_site ul li:hover a{
+    background-color: #fff;
+    color: #333;
+}
+
+footer .sns_q_btn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    box-sizing: border-box;
+    border-top: dashed 1px #e31a40;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .sns_q_btn li{
+    width: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+footer .sns_q_btn li a{
+    width: 100%;
+}
+footer .sns_q_btn li a img{
+    width: 100%;
+}
+
+.show{
+    display: block !important;
+}
+.popup > div{
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 200px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    border: solid 1px #333;
+    background-color: #fff;
+}
+.popup > div button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    background-color: transparent;
+    border: solid 1px #e31a40;
+    line-height: 32px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.popup > div button:hover{
+    background-color: #e31a40;
+    color: #fff;
+}
+
+.modal_popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100%;
+    z-index: 99999999;
+    display: none;
+}
+.layer_popup{
+    display: none;
+}
